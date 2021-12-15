@@ -3,9 +3,28 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Self Care Center</title>
   </head>
   <body>
-  
+    <section class="main-page">
+      <article="title-area">
+        <h2 class="main-page-title">Self Care Center</h2>
+      </article>
+      <article="choice-area">
+        <h4 class="main-page-question">Which type of message?</h4>
+        <form class="middle-choice">
+          <label for="affirmation"><input class="affirmation-radio-button" name="choice-option" value="affirmation" type="radio" id="affirmation">Affirmation</label>
+          <label for="mantra"><input class="mantra-radio-button" name="choice-option" value="mantra" type="radio" id="mantra">Mantra</label>
+          <button class="receive-message-button">Receieve Message</button>
+        </form>
+      </article>
+      <article="response-area">
+        <img class="meditate-logo" src="." alt="Meditate Logo"/>
+        <article class="response hidden">
+          <h4 class="random-answer"></h4>
+        </article>
+      </article>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
