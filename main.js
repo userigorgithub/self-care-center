@@ -32,4 +32,9 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
+// randomizer function 👇
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 // query selector variables 👇
