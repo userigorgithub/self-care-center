@@ -1,3 +1,93 @@
+/* GLOBAL RULES */
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* MAIN PAGE GENERAL */
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  margin: 0px;
+}
+
+button {
+  color: #ffffff;
+  background-color: #134d71;
+  height: 30px;
+  width: 170px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.hidden {
+  display: none!important;
+}
+
+/* LOGIN PAGE SPECIFIC */
+/* not implemented yet */
+
+/* MAIN PAGE SPECIFIC */
+
+.main-page-title, .main-page-question {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.main-page-title {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.choice-area {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  width: 500px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+
+.middle-choice {
+
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.button-inside-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+.response-area {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  width: 700px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.meditate-logo {
+  display: flex;
+  width: 60px;
+}
+
+
+
 /* font-family: 'Quicksand', sans-serif;
 COLORS
 light-yellow - #f7e4bf;
