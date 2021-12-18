@@ -49,7 +49,7 @@ var response = document.querySelector(".response");
 var randomAnswer = document.querySelector(".random-answer");
 
 // event listeners 👇
-
+receiveMessageBtn.addEventListener('click', randomResponse);
 
 
 // functions and event handlers 👇
