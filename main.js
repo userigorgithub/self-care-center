@@ -38,3 +38,18 @@ function getRandomIndex(array) {
 }
 
 // query selector variables 👇
+var affirmation = document.querySelector(".affirmation-radio-button");
+var mantra = document.querySelector(".mantra-radio-button");
+
+var receiveMessageBtn = document.querySelector(".receive-message-button");
+
+var meditateLogo = document.querySelector(".meditate-logo");
+var response = document.querySelector(".response");
+
+var randomAnswer = document.querySelector(".random-answer");
+
+// event listeners 👇
+
+
+
+// functions and event handlers 👇
