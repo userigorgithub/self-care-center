@@ -38,6 +38,15 @@ function getRandomIndex(array) {
 }
 
 // query selector variables 👇
+
+var submitBtn = document.querySelector(".submit-button");
+
+var loginPage = document.querySelector(".login-page");
+var mainPage = document.querySelector(".main-page");
+
+var welcome = document.querySelector(".main-page-welcome");
+var welcomeInput = document.querySelector("#name");
+
 var receiveMessageBtn = document.querySelector(".receive-message-button");
 
 var meditateLogo = document.querySelector(".meditate-logo");
