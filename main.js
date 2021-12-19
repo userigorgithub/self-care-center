@@ -1,4 +1,5 @@
 // data to work with 👇
+
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -33,6 +34,7 @@ var mantras = [
 ];
 
 // randomizer function 👇
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -55,10 +57,12 @@ var response = document.querySelector(".response");
 var randomAnswer = document.querySelector(".random-answer");
 
 // event listeners 👇
+
+submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
 
-
 // functions and event handlers 👇
+
 function randomResponse() {
   event.preventDefault();
   var form = document.querySelector('input[name="choice-option"]:checked').value;
