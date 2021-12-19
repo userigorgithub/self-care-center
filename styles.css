@@ -4,8 +4,6 @@
   font-family: 'Quicksand', sans-serif;
 }
 
-/* MAIN PAGE GENERAL */
-
 html {
   height: 100%;
 }
@@ -28,20 +26,49 @@ button {
   display: none!important;
 }
 
-/* LOGIN PAGE SPECIFIC */
-/* not implemented yet */
+/* LOGIN PAGE */
 
-/* MAIN PAGE SPECIFIC */
+.login-page-welcome {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 
-.main-page-title, .main-page-question {
+.enter-login {
+  background-color: #ffffff;
+  height: 150px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.login-name {
+  font-size: 21px;
+}
+
+.enter-name {
+  height: 30px;
+  width: 160px;
+  font-size: 20px;
+}
+
+/* MAIN PAGE */
+
+.main-page-welcome, .main-page-title, .main-page-question {
   color: #ffffff;
   display: flex;
   justify-content: center;
 }
 
 .main-page-title {
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .choice-area {
@@ -50,22 +77,19 @@ button {
   width: 500px;
   border-radius: 10px;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
-#affirmation {
+#affirmation, #mantra {
   margin-left: 20%;
-}
-
-#mantra {
-  margin-left: 20%;
+  margin-top: 2%;
 }
 
 .button-form {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 15px;
+  margin-top: 3%;
 }
 
 .response-area {

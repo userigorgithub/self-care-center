@@ -6,11 +6,22 @@
     <title>Self Care Center</title>
   </head>
   <body>
-    <section class="main-page">
-      <article class="title-area">
-        <h2 class="main-page-title">&#x2728; Self Care Center &#x2728;</h2>
+    <section class="login-page">
+      <article class="welcome-area">
+        <h2 class="login-page-welcome">Welcome to Self Care Center!</h2>
       </article>
-      <article class="question-area">
+      <article class="login-area">
+        <form class="enter-login">
+          <label for="login-name" class="login-name">Enter Your Name:</label>
+          <input class="enter-name" name="text-option" type="text" id="name" placeholder="Enter name here">
+          <button class="submit-button">Submit</button>
+        </form>
+      </article>
+    </section>
+    <section class="main-page">
+      <article class="top-area">
+        <h3 class="main-page-welcome">Welcome</h3>
+        <h2 class="main-page-title">&#x2728; Self Care Center &#x2728;</h2>
         <h4 class="main-page-question">Which type of message?</h4>
       </article>
       <article class="choice-area">
@@ -19,7 +30,7 @@
           <label for="mantra"><input class="mantra-radio-button" name="choice-option" value="mantra" type="radio" id="mantra">Mantra</label>
         <article class="button-form">
           <button class="receive-message-button">Receive Message</button>
-        </article>  
+        </article>
         </form>
       </article>
       <article class="response-area">
