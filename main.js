@@ -46,7 +46,7 @@ var submitBtn = document.querySelector(".submit-button");
 var loginPage = document.querySelector(".login-page");
 var mainPage = document.querySelector(".main-page");
 
-var welcome = document.querySelector(".main-page-welcome");
+var welcome = document.querySelector(".main-page-welcome-input");
 var welcomeInput = document.querySelector("#name");
 
 var receiveMessageBtn = document.querySelector(".receive-message-button");
@@ -62,6 +62,13 @@ submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
 
 // functions and event handlers 👇
+
+function loginToMainPage() {
+  event.preventDefault();
+  welcome.innerText = welcomeInput.value;
+  loginPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+}
 
 function randomResponse() {
   event.preventDefault();
