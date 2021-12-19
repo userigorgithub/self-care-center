@@ -46,8 +46,6 @@ button {
 
 .choice-area {
   background-color: #ffffff;
-  display: flex;
-  justify-content: center;
   height: 90px;
   width: 500px;
   border-radius: 10px;
@@ -55,20 +53,20 @@ button {
   margin-bottom: 100px;
 }
 
-
-.middle-choice {
-
-  display: flex;
-  justify-content: center;
-  gap: 100px;
+#affirmation {
+  margin-left: 20%;
 }
 
-.button-inside-form {
+#mantra {
+  margin-left: 20%;
+}
+
+.button-form {
   display: flex;
+  justify-content: center;
   align-items: flex-end;
-  justify-content: center;
+  margin-top: 15px;
 }
-
 
 .response-area {
   background-color: #ffffff;
