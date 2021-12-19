@@ -28,6 +28,36 @@ button {
 
 /* LOGIN PAGE */
 
+.login-page-welcome {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.enter-login {
+  background-color: #ffffff;
+  height: 150px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.login-name {
+  font-size: 21px;
+}
+
+.enter-name {
+  height: 30px;
+  width: 160px;
+  font-size: 20px;
+}
+
 /* MAIN PAGE */
 
 .main-page-welcome, .main-page-title, .main-page-question {
