@@ -1,4 +1,5 @@
 // data to work with 👇
+
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -33,11 +34,21 @@ var mantras = [
 ];
 
 // randomizer function 👇
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 // query selector variables 👇
+
+var submitBtn = document.querySelector(".submit-button");
+
+var loginPage = document.querySelector(".login-page");
+var mainPage = document.querySelector(".main-page");
+
+var welcome = document.querySelector(".main-page-welcome-input");
+var welcomeInput = document.querySelector("#name");
+
 var receiveMessageBtn = document.querySelector(".receive-message-button");
 
 var meditateLogo = document.querySelector(".meditate-logo");
@@ -46,10 +57,19 @@ var response = document.querySelector(".response");
 var randomAnswer = document.querySelector(".random-answer");
 
 // event listeners 👇
+
+submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
 
-
 // functions and event handlers 👇
+
+function loginToMainPage() {
+  event.preventDefault();
+  welcome.innerText = welcomeInput.value;
+  loginPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+}
+
 function randomResponse() {
   event.preventDefault();
   var form = document.querySelector('input[name="choice-option"]:checked').value;
