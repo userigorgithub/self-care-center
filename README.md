@@ -1,24 +1,40 @@
 # Self Care Center
+
+## Contributors
+[Igor Decess](https://github.com/userigorgithub)
+
+## Technologies Used
+- Github open source version control software: [Website](https://github.com/)
+
+- HTML
+- CSS
+- JavaScript
+
 ## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
+Self Care Center was the project to gain better understanding in writing HTML, CSS, and JavaScript code and their interaction between each other. Generate positive self-empowering messages when are you feeling down! Access it by clicking [HERE!](https://userigorgithub.github.io/self-care-center/)
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+## Features
+- Login Page
+- Intermediate CSS (partially done)
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
+## Installation Instructions
+1. Clone this repository into your terminal
+2. `cd` into the directory
+3. Run `open index.html` to see it in the browser
 
-## Learning Goals
+## User Instructions
+1. This is the login page of the application.
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+<img width="1099" alt="Screen Shot 2021-12-19 at 6 03 22 PM" src="https://user-images.githubusercontent.com/87003746/146698048-034bf808-728f-484c-bb10-ac0b0728870d.png">
 
-## Setup
+2. Click "Enter name here" field and enter your name.
+3. Click "Submit" button and main page will appear.
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+<img width="1103" alt="Screen Shot 2021-12-19 at 6 03 54 PM" src="https://user-images.githubusercontent.com/87003746/146698061-fc09d016-a5ea-4119-87b2-24af000c55a0.png">
 
+4. Click "Affirmation" or "Mantra" radio button and then click "Receive Message" button.
+5. Positive message will appear in place of a bell!
+
+<img width="1100" alt="Screen Shot 2021-12-19 at 6 04 29 PM" src="https://user-images.githubusercontent.com/87003746/146698078-694187b9-364b-4998-a9ed-f5fa8008e573.png">
+
+6. Enjoy and remember, everything will be alright!
