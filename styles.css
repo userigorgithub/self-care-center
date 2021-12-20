@@ -22,6 +22,12 @@ button {
   text-align: center;
 }
 
+button:hover {
+  background: #f7e4bf;
+  color: #000000;
+  transform: scale(1.2);
+}
+
 .hidden {
   display: none!important;
 }
@@ -81,7 +87,7 @@ button {
   width: 500px;
   border-radius: 10px;
   margin: auto;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 #affirmation,
@@ -106,6 +112,7 @@ button {
   width: 700px;
   border-radius: 10px;
   margin: auto;
+  margin-bottom: 40px;
 }
 
 .meditate-logo {
@@ -113,13 +120,7 @@ button {
   width: 60px;
 }
 
-
-
-/* font-family: 'Quicksand', sans-serif;
-COLORS
-light-yellow - #f7e4bf;
-light-blue - #78a7c6;
-dark-blue - #134d71;
-white - #ffffff;
-black - #000000;
-*/
+.button-choices {
+  display: flex;
+  justify-content: space-evenly;
+}
