@@ -90,10 +90,9 @@ button:hover {
   margin-bottom: 50px;
 }
 
-#affirmation,
-#mantra {
-  margin-left: 20%;
-  margin-top: 2%;
+.middle-choice {
+  display: flex;
+  justify-content: space-around;
 }
 
 .button-form {
