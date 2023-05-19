@@ -1,5 +1,4 @@
 /* GLOBAL RULES */
-
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -25,7 +24,7 @@ button {
 button:hover {
   background: #f7e4bf;
   color: #000000;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .hidden {
@@ -33,7 +32,6 @@ button:hover {
 }
 
 /* LOGIN PAGE */
-
 .login-page-welcome {
   color: #ffffff;
   display: flex;
@@ -65,7 +63,6 @@ button:hover {
 }
 
 /* MAIN PAGE */
-
 .main-page-welcome,
 .main-page-welcome-input,
 .main-page-title,
@@ -83,36 +80,43 @@ button:hover {
 
 .choice-area {
   background-color: #ffffff;
-  height: 90px;
-  width: 500px;
+  height: 100px;
+  width: 600px;
   border-radius: 10px;
   margin: auto;
   margin-bottom: 50px;
 }
 
-#affirmation,
-#mantra {
-  margin-left: 20%;
-  margin-top: 2%;
+.middle-choice {
+  display: flex;
+  justify-content: space-around;
 }
 
 .button-form {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 .response-area {
   background-color: #ffffff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
   height: 125px;
-  width: 700px;
+  width: 600px;
   border-radius: 10px;
   margin: auto;
   margin-bottom: 40px;
+}
+
+.favorite-button,
+.back-button {
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 80px;
 }
 
 .meditate-logo {
@@ -122,5 +126,6 @@ button:hover {
 
 .button-choices {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 1%;
 }
