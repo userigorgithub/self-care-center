@@ -102,14 +102,21 @@ button:hover {
 .response-area {
   background-color: #ffffff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 100px;
+  height: 125px;
   width: 600px;
   border-radius: 10px;
   margin: auto;
   margin-bottom: 40px;
+}
+
+.favorite-button,
+.back-button {
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 80px;
 }
 
 .meditate-logo {
