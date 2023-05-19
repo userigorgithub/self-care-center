@@ -1,5 +1,4 @@
 /* GLOBAL RULES */
-
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -33,7 +32,6 @@ button:hover {
 }
 
 /* LOGIN PAGE */
-
 .login-page-welcome {
   color: #ffffff;
   display: flex;
@@ -65,7 +63,6 @@ button:hover {
 }
 
 /* MAIN PAGE */
-
 .main-page-welcome,
 .main-page-welcome-input,
 .main-page-title,
@@ -83,8 +80,8 @@ button:hover {
 
 .choice-area {
   background-color: #ffffff;
-  height: 90px;
-  width: 500px;
+  height: 100px;
+  width: 600px;
   border-radius: 10px;
   margin: auto;
   margin-bottom: 50px;
@@ -99,7 +96,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 .response-area {
@@ -107,8 +104,9 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 125px;
-  width: 700px;
+  text-align: center;
+  height: 100px;
+  width: 600px;
   border-radius: 10px;
   margin: auto;
   margin-bottom: 40px;
