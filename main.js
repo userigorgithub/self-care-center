@@ -50,6 +50,7 @@ var welcome = document.querySelector(".main-page-welcome-input");
 var welcomeInput = document.querySelector("#name");
 
 var receiveMessageBtn = document.querySelector(".receive-message-button");
+var favoriteBtn = document.querySelector(".favorite-button");
 
 var meditateLogo = document.querySelector(".meditate-logo");
 var response = document.querySelector(".response");
