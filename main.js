@@ -60,6 +60,7 @@ var randomAnswer = document.querySelector(".random-answer");
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
+favoriteBtn.addEventListener('click', favoriteMessage);
 
 // functions and event handlers 👇
 function loginToMainPage() {
