@@ -52,15 +52,19 @@ var welcomeInput = document.querySelector("#name");
 var receiveMessageBtn = document.querySelector(".receive-message-button");
 var favoriteBtn = document.querySelector(".favorite-button");
 
+
 var meditateLogo = document.querySelector(".meditate-logo");
 var response = document.querySelector(".response");
-
 var randomAnswer = document.querySelector(".random-answer");
+
+var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
+var viewFavMessagesBtn = document.querySelector(".view-favorires-button");
 
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
 favoriteBtn.addEventListener('click', favoriteMessage);
+viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
 
 // functions and event handlers 👇
 function loginToMainPage() {
@@ -90,4 +94,8 @@ function favoriteMessage() {
     console.log(randomAnswer)
     console.log(favorites)
   }
+}
+
+function viewFavoriteMessages() {
+
 }
