@@ -83,3 +83,11 @@ function randomResponse() {
   meditateLogo.classList.add('hidden');
   response.classList.remove('hidden');
 }
+
+function favoriteMessage() {
+  if (!favorites.includes(randomAnswer.innerText)) {
+    favorites.push(randomAnswer.innerText)
+    console.log(randomAnswer)
+    console.log(favorites)
+  }
+}
