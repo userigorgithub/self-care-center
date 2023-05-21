@@ -135,5 +135,19 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+}
+
+.favorites-title {
+  color: #ffffff;
+}
+
+.saved-affirmations-mantras {
+  display: grid;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.back-to-main {
+  margin-top: 40px;
 }
