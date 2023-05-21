@@ -115,3 +115,8 @@ function viewFavoriteMessages() {
   mainPage.classList.add('hidden');
   favoritesPage.classList.remove('hidden');
 }
+
+function closeFavorites() {
+  favoritesPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+}
