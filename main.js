@@ -54,7 +54,6 @@ var receiveMessageBtn = document.querySelector(".receive-message-button");
 var favoriteBtn = document.querySelector(".favorite-button");
 var backBtn = document.querySelector(".back-button");
 
-
 var meditateLogo = document.querySelector(".meditate-logo");
 var response = document.querySelector(".response");
 var randomAnswer = document.querySelector(".random-answer");
@@ -96,8 +95,6 @@ function randomResponse() {
 function favoriteMessage() {
   if (!favorites.includes(randomAnswer.innerText)) {
     favorites.push(randomAnswer.innerText)
-    console.log(randomAnswer)
-    console.log(favorites)
   }
 }
 
