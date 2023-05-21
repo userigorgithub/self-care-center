@@ -45,6 +45,7 @@ var submitBtn = document.querySelector(".submit-button");
 
 var loginPage = document.querySelector(".login-page");
 var mainPage = document.querySelector(".main-page");
+var favoritesPage = document.querySelector(".favorites-page");
 
 var welcome = document.querySelector(".main-page-welcome-input");
 var welcomeInput = document.querySelector("#name");
@@ -102,4 +103,6 @@ function viewFavoriteMessages() {
     savedFavMessages.innerHTML +=
     `<p class="para" id="${item}">${item}</p>`
   })
+  mainPage.classList.add('hidden');
+  favoritesPage.classList.remove('hidden');
 }
