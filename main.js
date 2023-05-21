@@ -1,5 +1,4 @@
 // data to work with 👇
-
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -34,36 +33,44 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
-// randomizer function 👇
+var favorites = [];
 
+// randomizer function 👇
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 // query selector variables 👇
-
 var submitBtn = document.querySelector(".submit-button");
 
 var loginPage = document.querySelector(".login-page");
 var mainPage = document.querySelector(".main-page");
+var favoritesPage = document.querySelector(".favorites-page");
 
 var welcome = document.querySelector(".main-page-welcome-input");
 var welcomeInput = document.querySelector("#name");
 
 var receiveMessageBtn = document.querySelector(".receive-message-button");
+var favoriteBtn = document.querySelector(".favorite-button");
+var backBtn = document.querySelector(".back-button");
 
 var meditateLogo = document.querySelector(".meditate-logo");
 var response = document.querySelector(".response");
-
 var randomAnswer = document.querySelector(".random-answer");
 
-// event listeners 👇
+var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
+var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
+var backToMainBtn = document.querySelector(".back-to-main");
 
+// event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
+favoriteBtn.addEventListener('click', favoriteMessage);
+backBtn.addEventListener('click', closeMessageBox);
+viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
+backToMainBtn.addEventListener('click', closeFavorites);
 
 // functions and event handlers 👇
-
 function loginToMainPage() {
   event.preventDefault();
   welcome.innerText = welcomeInput.value;
@@ -83,4 +90,30 @@ function randomResponse() {
   }
   meditateLogo.classList.add('hidden');
   response.classList.remove('hidden');
+}
+
+function favoriteMessage() {
+  if (!favorites.includes(randomAnswer.innerText)) {
+    favorites.push(randomAnswer.innerText)
+  }
+}
+
+function closeMessageBox() {
+  response.classList.add('hidden');
+  meditateLogo.classList.remove('hidden');
+}
+
+function viewFavoriteMessages() {
+  savedFavMessages.innerHTML = '';
+  favorites.forEach(function (item) {
+    savedFavMessages.innerHTML +=
+    `<p class="para" id="${item}">${item}</p>`
+  })
+  mainPage.classList.add('hidden');
+  favoritesPage.classList.remove('hidden');
+}
+
+function closeFavorites() {
+  favoritesPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
 }
