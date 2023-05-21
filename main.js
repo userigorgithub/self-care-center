@@ -99,7 +99,10 @@ function favoriteMessage() {
   }
 }
 
-
+function closeMessageBox() {
+  response.classList.add('hidden');
+  meditateLogo.classList.remove('hidden');
+}
 
 function viewFavoriteMessages() {
   savedFavMessages.innerHTML = '';
