@@ -61,6 +61,7 @@ var randomAnswer = document.querySelector(".random-answer");
 
 var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
 var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
+var backToMainBtn = document.querySelector(".back-to-main");
 
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
@@ -68,6 +69,7 @@ receiveMessageBtn.addEventListener('click', randomResponse);
 favoriteBtn.addEventListener('click', favoriteMessage);
 backBtn.addEventListener('click', closeMessageBox);
 viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
+backToMainBtn.addEventListener('click', closeFavorites);
 
 // functions and event handlers 👇
 function loginToMainPage() {
