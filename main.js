@@ -52,6 +52,7 @@ var welcomeInput = document.querySelector("#name");
 
 var receiveMessageBtn = document.querySelector(".receive-message-button");
 var favoriteBtn = document.querySelector(".favorite-button");
+var backBtn = document.querySelector(".back-button");
 
 
 var meditateLogo = document.querySelector(".meditate-logo");
@@ -65,6 +66,7 @@ var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
 submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
 favoriteBtn.addEventListener('click', favoriteMessage);
+backBtn.addEventListener('click', closeMessageBox);
 viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
 
 // functions and event handlers 👇
@@ -96,6 +98,8 @@ function favoriteMessage() {
     console.log(favorites)
   }
 }
+
+
 
 function viewFavoriteMessages() {
   savedFavMessages.innerHTML = '';
