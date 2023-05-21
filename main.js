@@ -58,7 +58,7 @@ var response = document.querySelector(".response");
 var randomAnswer = document.querySelector(".random-answer");
 
 var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
-var viewFavMessagesBtn = document.querySelector(".view-favorires-button");
+var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
 
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
@@ -97,5 +97,9 @@ function favoriteMessage() {
 }
 
 function viewFavoriteMessages() {
-
+  savedFavMessages.innerHTML = '';
+  favorites.forEach(function (item) {
+    savedFavMessages.innerHTML +=
+    `<p class="para" id="${item}">${item}</p>`
+  })
 }
