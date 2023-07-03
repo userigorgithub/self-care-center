@@ -53,6 +53,7 @@ var welcomeInput = document.querySelector("#name");
 var receiveMessageBtn = document.querySelector(".receive-message-button");
 var favoriteBtn = document.querySelector(".favorite-button");
 var backBtn = document.querySelector(".back-button");
+var radioAll = document.getElementsByTagName("input");
 
 var meditateLogo = document.querySelector(".meditate-logo");
 var response = document.querySelector(".response");
@@ -66,7 +67,10 @@ var backToMainBtn = document.querySelector(".back-to-main");
 submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
 favoriteBtn.addEventListener('click', favoriteMessage);
-backBtn.addEventListener('click', closeMessageBox);
+backBtn.addEventListener('click', function() {
+  clearRadio(radioAll);
+  closeMessageBox();
+});
 viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
 backToMainBtn.addEventListener('click', closeFavorites);
 
@@ -116,4 +120,12 @@ function viewFavoriteMessages() {
 function closeFavorites() {
   favoritesPage.classList.add('hidden');
   mainPage.classList.remove('hidden');
+}
+
+function clearRadio(radioAll) {
+  for (var i = 0; i < radioAll.length; i++) {
+    if (radioAll[i].type === "radio") {
+      radioAll[i].checked = false;
+    }
+  }
 }
