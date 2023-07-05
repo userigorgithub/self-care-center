@@ -84,7 +84,6 @@ button:hover {
   width: 600px;
   border-radius: 10px;
   margin: auto;
-  margin-bottom: 50px;
 }
 
 .middle-choice {
@@ -97,6 +96,11 @@ button:hover {
   justify-content: center;
   align-items: flex-end;
   margin-top: 5%;
+}
+
+.error-message {
+  color: #ffffff;
+  text-align: center;
 }
 
 .response-area {
