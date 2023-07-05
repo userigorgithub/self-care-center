@@ -55,9 +55,13 @@ var favoriteBtn = document.querySelector(".favorite-button");
 var backBtn = document.querySelector(".back-button");
 var radioAll = document.getElementsByTagName("input");
 
+var errorMessage = document.querySelector(".error-message");
+
 var meditateLogo = document.querySelector(".meditate-logo");
 var response = document.querySelector(".response");
 var randomAnswer = document.querySelector(".random-answer");
+var affirmationValue = document.querySelector("#affirmation").value;
+var mantraValue = document.querySelector("#mantra").value;
 
 var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
 var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
@@ -83,17 +87,21 @@ function loginToMainPage() {
 }
 
 function randomResponse() {
-  event.preventDefault();
-  var form = document.querySelector('input[name="choice-option"]:checked').value;
-  var affirmation = affirmations[getRandomIndex(affirmations)];
-  var mantra = mantras[getRandomIndex(mantras)];
-  if (form === "affirmation") {
+  if (radioAll[1].checked === true && affirmationValue === "affirmation") {
+    var affirmation = affirmations[getRandomIndex(affirmations)];
     randomAnswer.innerHTML = `${affirmation}`;
-  } else if (form === "mantra") {
+    errorMessage.innerHTML = "Your Affirmation is:";
+    meditateLogo.classList.add('hidden');
+    response.classList.remove('hidden');
+  } else if (radioAll[2].checked === true && mantraValue === "mantra") {
+    var mantra = mantras[getRandomIndex(mantras)];
     randomAnswer.innerHTML = `${mantra}`;
+    errorMessage.innerHTML = "Your Mantra is:";
+    meditateLogo.classList.add('hidden');
+    response.classList.remove('hidden');
+  } else {
+    errorMessage.innerHTML = "Click Affirmation or Mantra";
   }
-  meditateLogo.classList.add('hidden');
-  response.classList.remove('hidden');
 }
 
 function favoriteMessage() {
@@ -126,6 +134,7 @@ function clearRadio(radioAll) {
   for (var i = 0; i < radioAll.length; i++) {
     if (radioAll[i].type === "radio") {
       radioAll[i].checked = false;
+      errorMessage.innerHTML = "Randomize your Affirmation or Mantra"
     }
   }
 }
