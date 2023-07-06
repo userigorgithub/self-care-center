@@ -65,6 +65,8 @@ var mantraValue = document.querySelector("#mantra").value;
 
 var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
 var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
+// buuuuuuuton
+// var deleteFavAffManBtn = document.querySelector(".delete-aff-man");
 var backToMainBtn = document.querySelector(".back-to-main");
 
 // event listeners 👇
@@ -76,6 +78,10 @@ backBtn.addEventListener('click', function() {
   closeMessageBox();
 });
 viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
+savedFavMessages.addEventListener('click', deleteFavoriteAffMan);
+// deleteFavAffManBtn.addEventListener('click', function(event) {
+//   deleteFavoriteAffMan(event);
+// });
 backToMainBtn.addEventListener('click', closeFavorites);
 
 // functions and event handlers 👇
@@ -117,12 +123,27 @@ function closeMessageBox() {
 
 function viewFavoriteMessages() {
   savedFavMessages.innerHTML = '';
-  favorites.forEach(function (item) {
+  favorites.forEach(function(item) {
     savedFavMessages.innerHTML +=
-    `<p class="para" id="${item}">${item}</p>`
+    `<div class="aff-man">
+      <p class="para" id="${item}">${item}</p>
+      <button class="delete-aff-man" id="${item}" onclick="deleteFavoriteAffMan('${item}')">X</button>
+    </div>`
   })
+  console.log(favorites)
   mainPage.classList.add('hidden');
   favoritesPage.classList.remove('hidden');
+}
+
+
+
+function deleteFavoriteAffMan(event) {
+  favorites.forEach(function(item) {
+    if (event.target.id === item) {
+      favorites.splice(favorites.indexOf(item), 1)
+    }
+  })
+  viewFavoriteMessages();
 }
 
 function closeFavorites() {
