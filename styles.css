@@ -152,6 +152,18 @@ button:hover {
   border-radius: 10px;
 }
 
+.aff-man {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+
+.delete-aff-man {
+  height: 25px;
+  width: 25px;
+}
+
 .back-to-main {
   margin-top: 40px;
 }
