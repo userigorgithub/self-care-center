@@ -69,6 +69,12 @@ var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
 // var deleteFavAffManBtn = document.querySelector(".delete-aff-man");
 var backToMainBtn = document.querySelector(".back-to-main");
 
+var addNewMsgArea = document.querySelector(".add-message-area");
+var addMessageBtn = document.querySelector(".add-message-button");
+var newType = document.querySelector(".message-type-input");
+var newMessage = document.querySelector(".message-input");
+var addBtn = document.querySelector(".add-button");
+
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
 receiveMessageBtn.addEventListener('click', randomResponse);
@@ -83,6 +89,8 @@ savedFavMessages.addEventListener('click', deleteFavoriteAffMan);
 //   deleteFavoriteAffMan(event);
 // });
 backToMainBtn.addEventListener('click', closeFavorites);
+addMessageBtn.addEventListener('click', openCloseNewMessageArea);
+addBtn.addEventListener('click', addNewMessage);
 
 // functions and event handlers 👇
 function loginToMainPage() {
@@ -106,7 +114,7 @@ function randomResponse() {
     meditateLogo.classList.add('hidden');
     response.classList.remove('hidden');
   } else {
-    errorMessage.innerHTML = "Click Affirmation or Mantra";
+    errorMessage.innerHTML = "Click Affirmation or Mantra first";
   }
 }
 
@@ -132,6 +140,7 @@ function viewFavoriteMessages() {
   })
   console.log(favorites)
   mainPage.classList.add('hidden');
+  addNewMsgArea.classList.add('hidden');
   favoritesPage.classList.remove('hidden');
 }
 
@@ -158,4 +167,26 @@ function clearRadio(radioAll) {
       errorMessage.innerHTML = "Randomize your Affirmation or Mantra"
     }
   }
+}
+
+function openCloseNewMessageArea() {
+  addNewMsgArea.classList.toggle('hidden');
+}
+
+function addNewMessage() {
+  if ((newType.value === "Affirmation") && (newMessage.value !== "") && (!affirmations.includes(newMessage.value))) {
+    affirmations.push(newMessage.value);
+  } else if ((newType.value === "Mantra") && (newMessage.value !== "") && (!mantras.includes(newMessage.value))) {
+    mantras.push(newMessage.value);
+  } else if ((affirmations.includes(newMessage.value)) || (mantras.includes(newMessage.value))) {
+    alert("You cannot enter same message twice!")
+  } else {
+    alert("Use Affirmation or Mantra type and enter both values!")
+  }
+  clearValues();
+}
+
+function clearValues() {
+  newType.value = "";
+  newMessage.value = "";
 }
