@@ -167,3 +167,16 @@ button:hover {
 .back-to-main {
   margin-top: 40px;
 }
+
+/* NEW MESSAGE */
+.add-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  margin-top: 5%;
+}
+
+.add-button {
+  width: 60px;
+}
