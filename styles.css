@@ -63,7 +63,21 @@ button:hover {
 }
 
 /* MAIN PAGE */
-.main-page-welcome,
+.top-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-logout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logout {
+  width: 80px;
+}
+
 .main-page-welcome-input,
 .main-page-title,
 .main-page-question {
