@@ -50,6 +50,8 @@ var favoritesPage = document.querySelector(".favorites-page");
 var welcome = document.querySelector(".main-page-welcome-input");
 var welcomeInput = document.querySelector("#name");
 
+var logoutBtn = document.querySelector(".logout");
+
 var receiveMessageBtn = document.querySelector(".receive-message-button");
 var favoriteBtn = document.querySelector(".favorite-button");
 var backBtn = document.querySelector(".back-button");
@@ -77,6 +79,7 @@ var addBtn = document.querySelector(".add-button");
 
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
+logoutBtn.addEventListener('click', logout);
 receiveMessageBtn.addEventListener('click', randomResponse);
 favoriteBtn.addEventListener('click', favoriteMessage);
 backBtn.addEventListener('click', function() {
@@ -95,9 +98,23 @@ addBtn.addEventListener('click', addNewMessage);
 // functions and event handlers 👇
 function loginToMainPage() {
   event.preventDefault();
-  welcome.innerText = welcomeInput.value;
+  if (welcomeInput.value === "") {
+    welcome.innerText = "Welcome, Guest!";
+  } else {
+    welcome.innerText = `Welcome, ${welcomeInput.value}!`;
+  }
   loginPage.classList.add('hidden');
+  response.classList.add('hidden');
   mainPage.classList.remove('hidden');
+  meditateLogo.classList.remove('hidden');
+  clearRadio(radioAll);
+}
+
+function logout() {
+  mainPage.classList.add('hidden');
+  addNewMsgArea.classList.add('hidden');
+  loginPage.classList.remove('hidden');
+  clearValues();
 }
 
 function randomResponse() {
@@ -189,4 +206,5 @@ function addNewMessage() {
 function clearValues() {
   newType.value = "";
   newMessage.value = "";
+  welcomeInput.value = "";
 }
