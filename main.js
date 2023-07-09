@@ -33,6 +33,7 @@ var mantras = [
   "I am the sky, the rest is weather."
 ];
 
+// global variables 👇
 var favorites = [];
 
 // randomizer function 👇
@@ -49,7 +50,6 @@ var favoritesPage = document.querySelector(".favorites-page");
 
 var welcome = document.querySelector(".main-page-welcome-input");
 var welcomeInput = document.querySelector("#name");
-
 var logoutBtn = document.querySelector(".logout");
 
 var receiveMessageBtn = document.querySelector(".receive-message-button");
@@ -67,8 +67,6 @@ var mantraValue = document.querySelector("#mantra").value;
 
 var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
 var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
-// buuuuuuuton
-// var deleteFavAffManBtn = document.querySelector(".delete-aff-man");
 var backToMainBtn = document.querySelector(".back-to-main");
 
 var addNewMsgArea = document.querySelector(".add-message-area");
@@ -88,9 +86,6 @@ backBtn.addEventListener('click', function() {
 });
 viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
 savedFavMessages.addEventListener('click', deleteFavoriteAffMan);
-// deleteFavAffManBtn.addEventListener('click', function(event) {
-//   deleteFavoriteAffMan(event);
-// });
 backToMainBtn.addEventListener('click', closeFavorites);
 addMessageBtn.addEventListener('click', openCloseNewMessageArea);
 addBtn.addEventListener('click', addNewMessage);
@@ -120,18 +115,18 @@ function logout() {
 function randomResponse() {
   if (radioAll[1].checked === true && affirmationValue === "affirmation") {
     var affirmation = affirmations[getRandomIndex(affirmations)];
-    randomAnswer.innerHTML = `${affirmation}`;
+    randomAnswer.innerHTML = `&#128588 ${affirmation}`;
     errorMessage.innerHTML = "Your Affirmation is:";
     meditateLogo.classList.add('hidden');
     response.classList.remove('hidden');
   } else if (radioAll[2].checked === true && mantraValue === "mantra") {
     var mantra = mantras[getRandomIndex(mantras)];
-    randomAnswer.innerHTML = `${mantra}`;
+    randomAnswer.innerHTML = `&#129496 ${mantra}`;
     errorMessage.innerHTML = "Your Mantra is:";
     meditateLogo.classList.add('hidden');
     response.classList.remove('hidden');
   } else {
-    errorMessage.innerHTML = "Click Affirmation or Mantra first";
+    errorMessage.innerHTML = "Click Affirmation or Mantra first!";
   }
 }
 
@@ -155,13 +150,10 @@ function viewFavoriteMessages() {
       <button class="delete-aff-man" id="${item}" onclick="deleteFavoriteAffMan('${item}')">X</button>
     </div>`
   })
-  console.log(favorites)
   mainPage.classList.add('hidden');
   addNewMsgArea.classList.add('hidden');
   favoritesPage.classList.remove('hidden');
 }
-
-
 
 function deleteFavoriteAffMan(event) {
   favorites.forEach(function(item) {
@@ -181,7 +173,7 @@ function clearRadio(radioAll) {
   for (var i = 0; i < radioAll.length; i++) {
     if (radioAll[i].type === "radio") {
       radioAll[i].checked = false;
-      errorMessage.innerHTML = "Randomize your Affirmation or Mantra"
+      errorMessage.innerHTML = "Randomize your Affirmation or Mantra..."
     }
   }
 }
