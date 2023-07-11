@@ -146,6 +146,18 @@ button:hover {
   gap: 1%;
 }
 
+/* VIEW ALL MESSAGES PAGE */
+.affirmations-title,
+.mantras-title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.div-back-to-main-from-all-btn {
+  display: flex;
+  justify-content: center;
+}
+
 /* FAVORITES PAGE */
 .favorites-page {
   display: flex;

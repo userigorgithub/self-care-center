@@ -46,6 +46,7 @@ var submitBtn = document.querySelector(".submit-button");
 
 var loginPage = document.querySelector(".login-page");
 var mainPage = document.querySelector(".main-page");
+var viewAllMessagesPage = document.querySelector(".view-all-messages-page");
 var favoritesPage = document.querySelector(".favorites-page");
 
 var welcome = document.querySelector(".main-page-welcome-input");
@@ -65,9 +66,14 @@ var randomAnswer = document.querySelector(".random-answer");
 var affirmationValue = document.querySelector("#affirmation").value;
 var mantraValue = document.querySelector("#mantra").value;
 
-var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
+var viewAllMessagesBtn = document.querySelector(".view-all-messages-button");
+var allAffirmations = document.querySelector(".affirmations-list");
+var allMantras = document.querySelector(".mantras-list");
+var backToMainAllBtn = document.querySelector(".back-to-main-from-all-btn");
+
 var viewFavMessagesBtn = document.querySelector(".view-favorites-button");
-var backToMainBtn = document.querySelector(".back-to-main");
+var savedFavMessages = document.querySelector(".saved-affirmations-mantras");
+var backToMainBtn = document.querySelector(".back-to-main-from-fav-btn");
 
 var addNewMsgArea = document.querySelector(".add-message-area");
 var addMessageBtn = document.querySelector(".add-message-button");
@@ -84,6 +90,8 @@ backBtn.addEventListener('click', function() {
   clearRadio(radioAll);
   closeMessageBox();
 });
+viewAllMessagesBtn.addEventListener('click', viewAllMessages);
+backToMainAllBtn.addEventListener('click', closeAllMessages);
 viewFavMessagesBtn.addEventListener('click', viewFavoriteMessages);
 savedFavMessages.addEventListener('click', deleteFavoriteAffMan);
 backToMainBtn.addEventListener('click', closeFavorites);
@@ -139,6 +147,35 @@ function favoriteMessage() {
 function closeMessageBox() {
   response.classList.add('hidden');
   meditateLogo.classList.remove('hidden');
+}
+
+function viewAllMessages() {
+  mainPage.classList.add('hidden');
+  addNewMsgArea.classList.add('hidden');
+  viewAllMessagesPage.classList.remove('hidden');
+  viewAllAffirmations();
+  viewAllMantras();
+}
+
+function viewAllAffirmations() {
+  allAffirmations.innerHTML = '';
+  for (var i = 0; i < affirmations.length; i++) {
+    allAffirmations.innerHTML +=
+    `<ol class="affirmations-list">${affirmations[i]}</ol>`
+  }
+}
+
+function viewAllMantras() {
+  allMantras.innerHTML = '';
+  for (var i = 0; i < mantras.length; i++) {
+    allMantras.innerHTML +=
+    `<ol class="mantras-list">${mantras[i]}</ol>`
+  }
+}
+
+function closeAllMessages() {
+  viewAllMessagesPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
 }
 
 function viewFavoriteMessages() {
