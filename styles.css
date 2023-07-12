@@ -8,7 +8,6 @@ html {
 }
 
 body {
-  /* background: green; */
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   margin: 0px;
 }
@@ -72,7 +71,7 @@ button:hover {
 .welcome-logout {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .logout {
@@ -89,6 +88,11 @@ button:hover {
 
 .main-page-title {
   font-size: 28px;
+}
+
+.main-page-title:hover {
+  transform: translateY(0) scale(1.5);
+  transition: 500ms ease;
 }
 
 .choice-area {
@@ -275,14 +279,40 @@ button:hover {
   100% { transform: scale(1); }
 }
 
-/* .aff-background {
-  background-image: linear-gradient(#DCE9F5, #6595DA);
+.aff-background {
+  background: #78a7c6;
   animation: backgroundAnimation 5s ease;
 }
+
+.man-background {
+  background: #92cf80;
+  animation: backgroundAnimation 5s ease;
+}
+
 @keyframes backgroundAnimation {
-  0% { opacity: 0.5; }
+  0% { opacity: 0.7; }
   100% { opacity: 1; }
-} */
+}
+
+@-webkit-keyframes backgroundAnimation {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes backgroundAnimation {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes backgroundAnimation {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes backgroundAnimation {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
 
 .loading {
   width: 50px;
