@@ -42,7 +42,7 @@ function getRandomIndex(array) {
 }
 
 // query selector variables 👇
-// var background = document.querySelector("body"); // extra
+var background = document.querySelector("body");
 var animation = document.querySelector(".loading");
 
 var submitBtn = document.querySelector(".submit-button");
@@ -87,7 +87,6 @@ var addBtn = document.querySelector(".add-button");
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
 logoutBtn.addEventListener('click', logout);
-// receiveMessageBtn.addEventListener('click', randomResponse);
 receiveMessageBtn.addEventListener('click', function() {
   loadAnimation();
   setTimeout(randomResponse, 2000);
@@ -124,6 +123,9 @@ function logout() {
   mainPage.classList.add('hidden');
   addNewMsgArea.classList.add('hidden');
   loginPage.classList.remove('hidden');
+  background.classList.add('background');
+  background.classList.remove('man-background');
+  background.classList.remove('aff-background');
   clearValues();
 }
 
@@ -135,8 +137,9 @@ function randomResponse() {
     meditateLogo.classList.add('hidden');
     animation.classList.add('hidden');
     response.classList.remove('hidden');
-    // background.classList.remove('man-background'); // extra
-    // background.classList.add('aff-background'); // extra
+    background.classList.remove('background');
+    background.classList.remove('man-background');
+    background.classList.add('aff-background');
   } else if (radioAll[2].checked === true && mantraValue === "mantra") {
     var mantra = mantras[getRandomIndex(mantras)];
     randomAnswer.innerHTML = `&#129496 ${mantra}`;
@@ -144,6 +147,9 @@ function randomResponse() {
     meditateLogo.classList.add('hidden');
     animation.classList.add('hidden');
     response.classList.remove('hidden');
+    background.classList.remove('background');
+    background.classList.remove('aff-background');
+    background.classList.add('man-background');
   } else {
     errorMessage.innerHTML = "Click Affirmation or Mantra first!";
     animation.classList.add('hidden');
@@ -166,12 +172,18 @@ function favoriteMessage() {
 function closeMessageBox() {
   response.classList.add('hidden');
   meditateLogo.classList.remove('hidden');
+  background.classList.add('background');
+  background.classList.remove('man-background');
+  background.classList.remove('aff-background');
 }
 
 function viewAllMessages() {
   mainPage.classList.add('hidden');
   addNewMsgArea.classList.add('hidden');
   viewAllMessagesPage.classList.remove('hidden');
+  background.classList.add('background');
+  background.classList.remove('man-background');
+  background.classList.remove('aff-background');
   viewAllAffirmations();
   viewAllMantras();
 }
@@ -209,6 +221,9 @@ function viewFavoriteMessages() {
   mainPage.classList.add('hidden');
   addNewMsgArea.classList.add('hidden');
   favoritesPage.classList.remove('hidden');
+  background.classList.add('background');
+  background.classList.remove('man-background');
+  background.classList.remove('aff-background');
 }
 
 function deleteFavoriteAffMan(event) {
