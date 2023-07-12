@@ -42,6 +42,9 @@ function getRandomIndex(array) {
 }
 
 // query selector variables 👇
+// var background = document.querySelector("body"); // extra
+var animation = document.querySelector(".loading");
+
 var submitBtn = document.querySelector(".submit-button");
 
 var loginPage = document.querySelector(".login-page");
@@ -84,7 +87,11 @@ var addBtn = document.querySelector(".add-button");
 // event listeners 👇
 submitBtn.addEventListener('click', loginToMainPage);
 logoutBtn.addEventListener('click', logout);
-receiveMessageBtn.addEventListener('click', randomResponse);
+// receiveMessageBtn.addEventListener('click', randomResponse);
+receiveMessageBtn.addEventListener('click', function() {
+  loadAnimation();
+  setTimeout(randomResponse, 2000);
+});
 favoriteBtn.addEventListener('click', favoriteMessage);
 backBtn.addEventListener('click', function() {
   clearRadio(radioAll);
@@ -126,16 +133,28 @@ function randomResponse() {
     randomAnswer.innerHTML = `&#128588 ${affirmation}`;
     errorMessage.innerHTML = "Your Affirmation is:";
     meditateLogo.classList.add('hidden');
+    animation.classList.add('hidden');
     response.classList.remove('hidden');
+    // background.classList.remove('man-background'); // extra
+    // background.classList.add('aff-background'); // extra
   } else if (radioAll[2].checked === true && mantraValue === "mantra") {
     var mantra = mantras[getRandomIndex(mantras)];
     randomAnswer.innerHTML = `&#129496 ${mantra}`;
     errorMessage.innerHTML = "Your Mantra is:";
     meditateLogo.classList.add('hidden');
+    animation.classList.add('hidden');
     response.classList.remove('hidden');
   } else {
     errorMessage.innerHTML = "Click Affirmation or Mantra first!";
+    animation.classList.add('hidden');
+    meditateLogo.classList.remove('hidden');
   }
+}
+
+function loadAnimation() {
+  meditateLogo.classList.add('hidden');
+  response.classList.add('hidden');
+  animation.classList.remove('hidden');
 }
 
 function favoriteMessage() {
