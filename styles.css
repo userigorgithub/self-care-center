@@ -179,6 +179,10 @@ button:hover {
   justify-content: center;
 }
 
+.back-to-main-from-all-btn {
+  margin-bottom: 10px;
+}
+
 /* FAVORITES PAGE */
 .favorites-page {
   display: flex;
@@ -209,8 +213,8 @@ button:hover {
   width: 25px;
 }
 
-.back-to-main {
-  margin-top: 40px;
+.back-to-main-from-fav-btn {
+  margin-top: 30px;
 }
 
 /* NEW MESSAGE */
