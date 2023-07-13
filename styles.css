@@ -27,17 +27,29 @@ button:hover {
   transform: scale(1.1);
 }
 
+.hr {
+  width: 60%;
+}
+
 .hidden {
   display: none!important;
 }
 
 /* LOGIN PAGE */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .login-page-welcome {
   color: #ffffff;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-top: 50px;
-  margin-bottom: 100px;
+}
+
+.login-area {
+  margin-top: 50px;
 }
 
 .enter-login {
@@ -49,7 +61,6 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
-  margin: auto;
 }
 
 .login-name {
