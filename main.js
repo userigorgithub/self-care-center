@@ -256,8 +256,10 @@ function openCloseNewMessageArea() {
 function addNewMessage() {
   if ((newType.value === "Affirmation") && (newMessage.value !== "") && (!affirmations.includes(newMessage.value))) {
     affirmations.push(newMessage.value);
+    alert("Your new Affirmation was added!");
   } else if ((newType.value === "Mantra") && (newMessage.value !== "") && (!mantras.includes(newMessage.value))) {
     mantras.push(newMessage.value);
+    alert("Your new Mantra was added!");
   } else if ((affirmations.includes(newMessage.value)) || (mantras.includes(newMessage.value))) {
     alert("You cannot enter same message twice!")
   } else {

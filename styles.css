@@ -27,17 +27,29 @@ button:hover {
   transform: scale(1.1);
 }
 
+.hr {
+  width: 60%;
+}
+
 .hidden {
   display: none!important;
 }
 
 /* LOGIN PAGE */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .login-page-welcome {
   color: #ffffff;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-top: 50px;
-  margin-bottom: 100px;
+}
+
+.login-area {
+  margin-top: 50px;
 }
 
 .enter-login {
@@ -49,7 +61,6 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
-  margin: auto;
 }
 
 .login-name {
@@ -168,6 +179,10 @@ button:hover {
   justify-content: center;
 }
 
+.back-to-main-from-all-btn {
+  margin-bottom: 10px;
+}
+
 /* FAVORITES PAGE */
 .favorites-page {
   display: flex;
@@ -198,8 +213,8 @@ button:hover {
   width: 25px;
 }
 
-.back-to-main {
-  margin-top: 40px;
+.back-to-main-from-fav-btn {
+  margin-top: 30px;
 }
 
 /* NEW MESSAGE */
