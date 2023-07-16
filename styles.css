@@ -297,11 +297,19 @@ button:hover {
 .aff-background {
   background: #78a7c6;
   animation: backgroundAnimation 5s ease;
+  -webkit-animation: backgroundAnimation 5s ease;
+  -moz-animation: backgroundAnimation 5s ease;
+  -ms-animation: backgroundAnimation 5s ease;
+  -o-animation: backgroundAnimation 5s ease;
 }
 
 .man-background {
   background: #92cf80;
   animation: backgroundAnimation 5s ease;
+  -webkit-animation: backgroundAnimation 5s ease;
+  -moz-animation: backgroundAnimation 5s ease;
+  -ms-animation: backgroundAnimation 5s ease;
+  -o-animation: backgroundAnimation 5s ease;
 }
 
 @keyframes backgroundAnimation {
